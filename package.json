@@ -2,6 +2,7 @@
   "name": "kitty-tracker",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://your-username.github.io/Kitty-Tracker",
   "type": "module",
   "scripts": {
     "dev": "vite",
