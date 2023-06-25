@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import leia_bear from '/src/leia_bear.png';
+import leia_bear from '/src/images/leia_bear.png';
 import Item from '/src/myitem';
 import About from '/src/about';
 import Family from '/src/family';
@@ -25,7 +25,7 @@ function App() {
 
 function Home() {
   return (
-    <>
+    <div className = "leiaAppContainer" >
       <div className="aboutleiaContainer">
         <About />
         <Family />
@@ -44,12 +44,12 @@ function Home() {
       <div className="aboutleiaContainer">
         <AskMe />
         <Link to="/myitem">
-          <button>
+          <button className = "leiaIntro">
             <h1> Pictures </h1>
           </button>
         </Link>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -2,19 +2,29 @@ import React from 'react';
 
 class Item extends React.Component {
 
-constructor(props){
-  super(props)
+state ={
+  showText: false
+};
 
-}
+toggleShowText = () => {
+  this.setState(prevState => ({
+    showText: !prevState.showText
+
+  }));
+};
+
 
   render(){
     return (
 
-  <div>
-      <h1> Pictures go here  </h1>
+  <div className = 'aboutButton'>
+      <button onClick={this.toggleShowText} type='button'>
+        {this.state.showText ? 'Picture will go here' : <h3>Picture</h3>}
+      </button>
+      {this.state.showText && <p> Pictures will go here </p>}
   </div>
 
-      )
+      );
   }
 }
 

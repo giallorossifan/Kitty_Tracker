@@ -15,11 +15,11 @@ constructor(props){
 
   <div className="navbar-container">
     <ul className= "nav nav-fill">
-      < li className= "nav-item">
+      {/* < li className= "nav-item">
        <NavLink to="/">
           < span className="nav-text nav-link active" aria-current="page"> Home </span>
         </NavLink>
-      </li>
+      </li> */}
       < li className= "nav-item">
         < a className="nav-text nav-link active" aria-current="page" href="#"> How it works </a>
       </li>

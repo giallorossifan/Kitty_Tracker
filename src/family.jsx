@@ -1,7 +1,11 @@
  import React from 'react';
 
 import Item from '/src/myitem';
-import leia_bear from '/src/leia_bear.png';
+import leia_bear from '/src/images/leia_bear.png';
+import luke from '/src/images/luke.png';
+import cali from '/src/images/cali.png';
+import ella from '/src/images/ella.png';
+import lisa from '/src/images/lisa.png';
 
 class Family extends React.Component {
 
@@ -29,38 +33,38 @@ toggleShowText = () => {
       <div>
         <div>
         <a href=" " target="_blank" className="familyNames">
-          <img src={leia_bear} className="familyImages" alt="Lisa" />
+          <img src={lisa} className="familyImages" alt="Lisa" />
         </a>
-        <p style={{ textAlign: 'center' }}>Lisa</p>
+        <p style={{ textAlign: 'center' }}>Lisa (Sister)</p>
         </div>
 
         <div>
         <a href=" " target="_blank" className="familyNames">
-          <img src={leia_bear} className="familyImages" alt="Lisa" />
+          <img src={ella} className="familyImages" alt="ella" />
         </a>
-        <p style={{ textAlign: 'center' }}>Ella</p>
+        <p style={{ textAlign: 'center' }}>Ella (Sister)</p>
         </div>
 
         <div>
         <a href=" " target="_blank" className="familyNames">
-          <img src={leia_bear} className="familyImages" alt="Lisa" />
+          <img src={cali} className="familyImages" alt="cali" />
         </a>
-        <p style={{ textAlign: 'center' }}>Cali</p>
+        <p style={{ textAlign: 'center' }}>Cali (Sister)</p>
         </div>
 
         <div>
         <a href=" " target="_blank" className="familyNames">
-          <img src={leia_bear} className="familyImages" alt="Lisa" />
+          <img src={luke} className="familyImages" alt="Luke" />
         </a>
-        <p style={{ textAlign: 'center' }}>Luke</p>
+        <p style={{ textAlign: 'center' }}>Luke (Twin Brother)</p>
         </div>
 
-        <div>
+        {/* <div>
         <a href=" " target="_blank" className="familyNames">
           <img src={leia_bear} className="familyImages" alt="Lisa" />
         </a>
         <p style={{ textAlign: 'center' }}>Mommy & Daddy </p>
-        </div>
+        </div> */}
 
       </div>
       }
