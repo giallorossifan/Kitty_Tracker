@@ -1,47 +1,59 @@
 import React from 'react';
 
-class Item extends React.Component {
+class MyItem extends React.Component {
+  constructor(props) {
+    super(props);
 
-<<<<<<< HEAD
-constructor(props){
-  super(props)
+    this.state = {
+      isUploading: false,
+      selectedImage: null,
+      showMyItem: false,
+    };
+  }
 
-}
-=======
-state ={
-  showText: false
-};
+  handleUploadImage = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        this.setState({ selectedImage: reader.result });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
-toggleShowText = () => {
-  this.setState(prevState => ({
-    showText: !prevState.showText
+  toggleUploadImage = () => {
+    this.setState((prevState) => ({
+      isUploading: !prevState.isUploading,
+      selectedImage: null,
+    }));
+  };
 
-  }));
-};
+  toggleMyItem = () => {
+    this.setState((prevState) => ({
+      showMyItem: !prevState.showMyItem,
+      isUploading: false,
+      selectedImage: null,
+    }));
+  };
 
->>>>>>> 442a2c821495ec201efc8dd50dc64332ae964438
+  render() {
+    const { isUploading, selectedImage, showMyItem } = this.state;
 
-  render(){
     return (
-
-<<<<<<< HEAD
-  <div>
-      <h1> Pictures go here  </h1>
-  </div>
-
-      )
-=======
-  <div className = 'aboutButton'>
-      <button onClick={this.toggleShowText} type='button'>
-        {this.state.showText ? 'Picture will go here' : <h3>Picture</h3>}
-      </button>
-      {this.state.showText && <p> Pictures will go here </p>}
-  </div>
-
-      );
->>>>>>> 442a2c821495ec201efc8dd50dc64332ae964438
+      <div className=''>
+        <button onClick={this.toggleMyItem} type='button'>
+          {showMyItem ? 'Hide' : <h3>Pictures</h3>}
+        </button>
+        {showMyItem && (
+          <div>
+            <input type="file" accept="image/*" onChange={this.handleUploadImage} />
+            {isUploading && selectedImage && <img src={selectedImage} alt="Uploaded" />}
+          </div>
+        )}
+      </div>
+    );
   }
 }
 
-
-export default Item;
+export default MyItem;

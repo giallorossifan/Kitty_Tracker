@@ -1,6 +1,16 @@
 *{
   box-sizing: border-box;
 }
+
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  /* height: 100%; */ /* Set height to 100% of the viewport */
+  width: 100%; /* Set width to 100% of the viewport */
+  overflow: hidden; /* Optional: Prevent content overflow */
+}
+
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -9,8 +19,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  /* background-color: #242424;
+ */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,13 +38,6 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-height: 100vh;
-  background-color: aquamarine;
-}
 
 h1 {
   font-size: 3.2em;
@@ -50,7 +53,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  display: inline;
+  /* display: inline; */
 }
 button:hover {
   border-color: #646cff;
@@ -77,7 +80,7 @@ button:focus-visible {
 .mainImage{
   display:block;
   padding-top: 0px;
-  /* border: 3px solid hotpink; */
+ /*  border: 3px solid hotpink; */
   width: 100%;
 }
 
@@ -146,8 +149,8 @@ width: 100%;
 
 /* Starwars */
 .characterImage{
-  border: 2px solid green;
-  width: auto;
+  /* border: 2px solid black; */
+ /*  width: auto; */
   height: 150px;
 }
 
@@ -155,6 +158,10 @@ width: 100%;
 /* Navbar */
 
 .navbar-container{
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* vertically center the items */
+  background-color: aquamarine;
   border-bottom: 4px solid black;
 
 
