@@ -1,45 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+/* import ImageCarouselPage from './ImageCarouselPage'; // Import the component
+ */
+const AskMe = () => {
+  const [showImages, setShowImages] = useState(false); // State variable to control image visibility
 
-class AskMe extends React.Component {
-
-
-  state ={
-    showText: false
+  const toggleImages = () => {
+    setShowImages(prevShowImages => !prevShowImages);
   };
 
-  toggleShowText = () => {
-    this.setState(prevState => ({
-      showText: !prevState.showText
-    }));
-  };
-
-
-
-
-
-
-
-    render(){
-    return (
-
-
-    <div className='aboutButton'>
-      <button onClick={this.toggleShowText} type='button'>
-        {this.state.showText ? 'Im Cute !!' : <h3>Ask Me</h3> }
+  return (
+    <div className='askme-container'>
+      <button type='button' onClick={toggleImages}>
+        <h3>View my Pics</h3>
       </button>
-      {this.state.showText && <p> Leia Bear Bio Lorem ips </p>}
+      {showImages && <ImageCarouselPage />} {/* Render ImageCarouselPage conditionally */}
     </div>
-
-
-
-
-
-        );
-
-
-    }
-
-  }
-
+  );
+};
 
 export default AskMe;

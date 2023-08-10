@@ -23,11 +23,11 @@ constructor(props){
         </NavLink>
       </li> */}
       < li className= "nav-item">
-        < a className="nav-text nav-link active" aria-current="page" href="#"> How it works </a>
+        < a className="nav-text nav-link active" aria-current="page" href="#"> Leia Bear </a>
       </li>
-      < li className= "nav-item">
+     {/*  < li className= "nav-item">
         < a className="nav-text nav-link active" aria-current="page" href="#"> button1 </a>
-      </li>
+      </li> */}
     </ul>
 
 

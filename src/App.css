@@ -42,3 +42,9 @@
     animation: logo-spin infinite 20s linear;
   }
 }
+
+.scrollable-content {
+  max-height: 100vh; /* Set the maximum height of the scrollable area */
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds max height */
+
+}

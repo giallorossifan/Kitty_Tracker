@@ -10,20 +10,24 @@ import Navbar from '/src/navbar';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import MyItem from './myitem';
 
-
 function App() {
   return (
 
     <Router>
-
+      <div className="scrollable-content">
       <div className="app-container">
       <Navbar />
+
+
       < Home />
+
 
       <Routes>
         <Route path="/myitem" element={< Item />} />
+
       </Routes>
 
+      </div>
       </div>
     </Router>
 
@@ -49,8 +53,8 @@ function Home() {
       </div>
 
       <div className="aboutleiaContainer">
-        <AskMe />
-        <MyItem />
+       {/*  <AskMe />
+        <MyItem /> */}
       </div>
     </div>
   );
